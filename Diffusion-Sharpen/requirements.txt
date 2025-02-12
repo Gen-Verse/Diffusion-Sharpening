@@ -1,0 +1,22 @@
+torch
+torchvision
+accelerate
+numpy
+pillow
+scipy
+einops
+transformers
+diffusers
+datasets
+huggingface_hub
+wandb
+tensorboard
+tqdm
+ftfy
+regex
+clip @ git+https://github.com/openai/CLIP.git
+ImageReward
+openai
+packaging
+bitsandbytes
+xformers
