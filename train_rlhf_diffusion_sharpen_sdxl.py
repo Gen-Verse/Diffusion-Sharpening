@@ -1051,7 +1051,7 @@ def main(args):
                 # Sample noise that we'll add to the latents
                 model_input = batch["model_input"].to(accelerator.device)
                 bsz = model_input.shape[0]
-                noise = torch.randn(size=(num_noisy_latents * bsz, model_input.shape[1], model_input.shape[2], model_input.shape[3]), device=accelerator.device)
+                noise = torch.randn(size=(num_noisy_latents * bsz, model_input.shape[1], model_input.shape[2], model_input.shape[3]), device=accelerator.device, dtype=weight_dtype)
                 latents = noise
                 for i, t in enumerate(noise_scheduler.timesteps):
                     with torch.no_grad():
@@ -1091,7 +1091,7 @@ def main(args):
 
                 
                 trajectory_nums = min(args.trajectory_nums , 1 + timesteps // (noise_scheduler.config.num_train_timesteps // args.infer_steps))
-                noisy_model_input = noise_scheduler.add_noise(latents, noise, timesteps)
+                noisy_model_input = noise_scheduler.add_noise(latents, noise, timesteps).to(dtype=weight_dtype)
                 rewards_list = []
                 loss_list = []
                 with torch.no_grad():
@@ -1118,7 +1118,7 @@ def main(args):
                         added_cond_kwargs=unet_added_conditions,
                         return_dict=False,
                     )[0]
-                    prev_sample, pred_original_sample = noise_scheduler.step(model_output = model_pred, timestep = timesteps_traj, sample = noisy_model_input, return_dict=False)
+                    prev_sample, pred_original_sample = noise_scheduler.step(model_output = model_pred, timestep = timesteps_traj[0], sample = noisy_model_input_scaled, return_dict=False)
                     noisy_model_input = prev_sample
                     # decode the pred_original_sample
                     pred_original_sample_decoded = vae.decode(pred_original_sample, return_dict=False)[0] / vae.config.scaling_factor
