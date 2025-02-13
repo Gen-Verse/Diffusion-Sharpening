@@ -11,6 +11,7 @@ This repository provides implementation for the paper "Diffusion-Sharpeninging: 
 
 ![alt text](./figs/fig1.png)
 Diffusion-Sharpeninging is a trajectory-level fine-tuning framework for diffusion models that autonomously optimizes sampling paths through reward-guided iterative refinement. By integrating self-alignment with a path integral approach, it eliminates the reliance on predefined datasets and amortizes inference costs into training, achieving superior efficiency in both convergence and inference.
+![alt text](./figs/fig2.png)
 
 ## 🚀 Installation  
 To set up the environment and install dependencies, run the following:  
@@ -102,14 +103,14 @@ accelerate launch --main_process_port 10950 train_rlhf_diffusion_sharpen_sdxl.py
 
 ![alt text](./figs/fig3.png)
 
-![alt text](./figs/fig2.png)
+
 
 
 
 ## 📜 Citation  
 If you find this work useful, please consider citing:  
 ```bibtex
-@article{diffusion-sharpening2025,
+@article{tian2025sharpening,
   title={Diffusion-Sharpeninging: Fine-tuning Diffusion Models with Denoising Trajectory Sharpeninging},
   author={},
   journal={ArXiv},
