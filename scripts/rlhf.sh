@@ -16,4 +16,4 @@ accelerate launch --main_process_port 10950 train_rlhf_diffusion_sharpen_sdxl.py
   --report_to="wandb" \
   --validation_prompt="a cute Sundar Pichai creature" --validation_epochs 5 \
   --checkpointing_steps=5000 \
-  --output_dir="sdxl-naruto-model" 
+  --output_dir="output_dir" 
