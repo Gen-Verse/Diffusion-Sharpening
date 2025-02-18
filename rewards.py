@@ -185,5 +185,5 @@ class MLLMGrader:
 # right_half = img.crop((width//2, 0, width, img.size[1]))
 # images = [left_half, right_half]
 # prompts = ["a beautiful woman"] * 2
-# scores = reward_model.get_reward(images, prompts)
+# scores = reward_model.get_reward(images, prompts) 
 # print(scores)
