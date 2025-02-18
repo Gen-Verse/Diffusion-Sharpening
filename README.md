@@ -1,6 +1,6 @@
 # Diffusion-Sharpening: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening
 
-This repository provides implementation for the paper ["Diffusion-Sharpeninging: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening"]()
+This repository provides implementation for the paper ["Diffusion-Sharpeninging: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening"](https://arxiv.org/abs/2502.12146)
 
 ## 🔥 Features  
 - **Trajectory-level optimization**: Guides the diffusion process toward high-reward regions.  
@@ -113,7 +113,7 @@ If you find this work useful, please consider citing:
 @article{tian2025sharpening,
   title={Diffusion-Sharpeninging: Fine-tuning Diffusion Models with Denoising Trajectory Sharpeninging},
   author={Tian, Ye and Yang, Ling and Zhang, Xinchen and Tong, Yunhai and Wang, Mengdi and Cui, Bin},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:2502.12146},
   year={2025}
 }
 ```
