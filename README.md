@@ -72,7 +72,7 @@ accelerate launch --main_process_port 10950 train_sft_diffusion_sharpen_sdxl.py 
 
 If you wish to use MLLM Grader, you can set your api key in the training command with `--api_key="your_api_key"` and `--base_url="your_base_url"`.
 
-## 🏗️ RLHF-Diffusion-Sharpening Training Command
+## 🏗️ RLHF-Diffusion-Sharpening Training Command 
 Online reinforcement learning method that eliminates the need for curated datasets by generating positive and negative sample pairs dynamically during training.
 Example accelerate launch command:
 ```bash
