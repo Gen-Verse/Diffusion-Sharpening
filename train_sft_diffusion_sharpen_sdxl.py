@@ -650,7 +650,7 @@ def main(args):
     else:
         reward_model = MLLMGrader(base_url=args.base_url, api_key=args.api_key, device = accelerator.device)
 
-    # Freeze vae and text encoders.
+    # Freeze vae and text encoders. 
     vae.requires_grad_(False)
     text_encoder_one.requires_grad_(False)
     text_encoder_two.requires_grad_(False)
