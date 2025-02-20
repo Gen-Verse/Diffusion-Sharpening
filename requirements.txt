@@ -15,7 +15,7 @@ tqdm
 ftfy
 regex
 clip @ git+https://github.com/openai/CLIP.git
-ImageReward
+image-reward
 openai
 packaging
 bitsandbytes
