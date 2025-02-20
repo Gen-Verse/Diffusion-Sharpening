@@ -18,7 +18,7 @@ To set up the environment and install dependencies, run the following:
 ```shell
 git clone https://github.com/Gen-Verse/Diffusion-Sharpening
 cd Diffusion-Sharpening
-conda create -n Diffusion-Sharpening python==3.8.10
+conda create -n Diffusion-Sharpening python==3.11.2
 conda activate Diffusion-Sharpening
 pip install -r requirements.txt
 ```
