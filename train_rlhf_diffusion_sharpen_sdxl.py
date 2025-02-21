@@ -26,7 +26,7 @@ from torchvision import transforms
 from torchvision.transforms.functional import crop
 from tqdm.auto import tqdm
 from transformers import AutoTokenizer, PretrainedConfig
-from scheduling_ddim_x0 import DDIMScheduler
+from diffusers import DDIMScheduler
 import diffusers
 from diffusers import AutoencoderKL, StableDiffusionXLPipeline, UNet2DConditionModel
 from diffusers.optimization import get_scheduler
