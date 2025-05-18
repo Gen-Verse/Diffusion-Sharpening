@@ -3,6 +3,7 @@ export DATASET_NAME="your_dataset_name"
 
 accelerate launch --main_process_port 10950 train_rlhf_diffusion_sharpen_sdxl.py  \
   --pretrained_model_name_or_path=$MODEL_NAME \
+  --pretrained_vae_model_name_or_path="madebyollin/sdxl-vae-fp16-fix" \
   --dataset_name=$DATASET_NAME \
   --enable_xformers_memory_efficient_attention \
   --resolution=512 --center_crop --random_flip \
