@@ -1121,7 +1121,7 @@ def main(args):
                     prev_sample, pred_original_sample = noise_scheduler.step(model_output = model_pred, timestep = timesteps_traj, sample = noisy_model_input, return_dict=False)
                     noisy_model_input = prev_sample
                     # decode the pred_original_sample
-                    pred_original_sample_decoded = vae.decode(pred_original_sample, return_dict=False)[0] / vae.config.scaling_factor
+                    pred_original_sample_decoded = vae.decode(pred_original_sample / vae.config.scaling_factor, return_dict=False)[0] 
                     pred_original_sample_decoded = (pred_original_sample_decoded / 2 + 0.5).clamp(0, 1)
                     # get the reward
                     to_pil = ToPILImage()
